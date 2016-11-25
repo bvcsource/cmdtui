@@ -1,0 +1,18 @@
+description = "interactive command completion and execution for building REPLs"
+version = "%%VERSION_NUM%%"
+requires = "astring"
+archive(byte) = "cmdtui.cma"
+archive(native) = "cmdtui.cmxa"
+plugin(byte) = "cmdtui.cma"
+plugin(native) = "cmdtui.cmxs"
+
+package "lambda-term" (
+  description = "Lambda-term support for cmdtui"
+  version = "%%VERSION_NUM%%"
+  requires = "cmdtui lambda-term logs.lwt logs.fmt fmt.tty cmdliner"
+  archive(byte) = "cmdtui_lambda_term.cma"
+  archive(native) = "cmdtui_lambda_term.cmxa"
+  plugin(byte) = "cmdtui_lambda_term.cma"
+  plugin(native) = "cmdtui_lambda_term.cmxs"
+  exists_if  = "cmdtui_lambda_term.cma"
+)

@@ -1,0 +1,7 @@
+".git": -traverse, not_hygienic
+"_opam": -traverse, not_hygienic
+true : bin_annot, principal, safe_string, short_paths, strict_sequence, warn(A-44), warn_error(SU), package(astring)
+
+<src> : include
+<src/cmdtui_lambda_term.*>: package(lambda-term logs.fmt fmt.tty logs.lwt cmdliner)
+<test/*>: package(lambda-term logs.fmt fmt.tty logs.lwt cmdliner)

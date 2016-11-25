@@ -1,0 +1,5 @@
+PKG astring lambda-term fmt
+FLG -safe-string -short-paths -strict-sequence -w A-44 -warn-error SU
+S src
+S test
+B _build/**
